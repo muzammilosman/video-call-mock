@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebRTC Video Conferencing</title>
+    </head>
+    <body>
+        <div id="selectRoom">
+            <input type="text" id="roomNumber"/>
+            <button id="goRoom">JOIN ROOM</button>
+        </div>
+
+        <div>
+            <div id="consultingRoom">
+                <video id="localVideo" autoplay></video>
+                <video id="remoteVideo" autoplay></video>
+            </div>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
+</html>
