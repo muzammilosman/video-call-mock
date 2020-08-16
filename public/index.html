@@ -11,9 +11,14 @@
 
         <div>
             <div id="consultingRoom">
-                <video id="localVideo" autoplay></video>
+                <video id="localVideo" muted="muted" autoplay></video>
                 <video id="remoteVideo" autoplay></video>
             </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="mute-stream" onclick="muteVideoStream()" >Mute Video</button>
+            <button id="mute-audio-local" onclick="muteAudioStream()">Mute Audio</button>
         </div>
 
         <script src="/socket.io/socket.io.js"></script>

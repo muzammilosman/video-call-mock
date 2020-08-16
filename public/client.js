@@ -132,3 +132,24 @@ function onAddStream(event) {
     remoteVideo.srcObject = event.streams[0];
     remoteStream = event.stream;
 }
+
+
+function muteVideoStream() {
+    localStream.getVideoTracks()[0].enabled = !localStream.getVideoTracks()[0].enabled
+    if(!localStream.getVideoTracks()[0].enabled) {
+        document.getElementById('mute-stream').innerHTML = "Unmute Video"
+    } else {
+        document.getElementById('mute-stream').innerHTML = "Mute Video"
+    }
+    
+}
+
+function muteAudioStream() {
+    localStream.getAudioTracks()[0].enabled = !localStream.getAudioTracks()[0].enabled
+    if(!localStream.getAudioTracks()[0].enabled) {
+        document.getElementById('mute-audio-local').innerHTML = "Unmute Audio"
+    } else {
+        document.getElementById('mute-audio-local').innerHTML = "Mute Audio"
+    }
+    
+}
